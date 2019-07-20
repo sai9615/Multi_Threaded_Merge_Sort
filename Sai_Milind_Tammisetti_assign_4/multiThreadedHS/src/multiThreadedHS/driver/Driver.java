@@ -1,10 +1,11 @@
+package multiThreadedHS.driver;
 
-package studentCoursesBackup.driver;
+import  multiThreadedHS.util.Results;
+import  multiThreadedHS.util.MyLogger;
+import  multiThreadedHS.util.FileProcessor;
+import  multiThreadedHS.util.MergeSort;
+import  multiThreadedHS.threads.ThreadWorker;
 
-import  studentCoursesBackup.util.Results;
-import  studentCoursesBackup.util.MyLogger;
-import  studentCoursesBackup.util.FileProcessor;
-import studentCoursesBackup.util.Heapsort;
 
 import java.util.ArrayList;
 
@@ -24,6 +25,13 @@ import java.util.ArrayList;
 	     */
 
 	    // FIXME: update this if statement for this assignment
+
+	   	String inputf1;
+		String inputf2;
+		String inputf3;
+		String output;
+		String Debug;
+
 		int n = Integer.parseInt(args[0]);
 		if(n > 3 || n < 1){
 			System.out.println("The value of N can only be between 1 and 3");
@@ -35,42 +43,6 @@ import java.util.ArrayList;
 		    System.err.println("Error: Incorrect number of arguments. Program accepts"+ (n+3) +" argumnets.");
 		    System.exit(0);
 	    } // end of if
-
-		String inputf = args[0];
-	    String deletef = args[1];
-		String outputf1 = args[2];
-		String outputf2 = args[3];
-		String outputf3 = args[4];
-		String Debug = args[5];
-
-		MyLogger obj = new MyLogger();
-
-		int dbglvl = Integer.parseInt(Debug);
-		if(dbglvl <0 || dbglvl > 4){
-			System.out.println("Enter proper dbg option from 1 to 4 \n");
-			System.out.println("0:RELEASE, 1:SHOW ERROR IF ENCOUNTERED, 2:SHOW RESULT TO STDOUT 3:PRINT WHEN CHANGE IN STATE 4:PRINT WHENEVER CONSTRUCTOR IS CALLED \n");
-			System.exit(0);
-		}
-		else {
-
-			obj.setDebugValue(dbglvl);
-			System.out.println("debug level set to "+dbglvl);
-		}
-
-		String input;
-		ArrayList<String> store = new ArrayList<>();
-		FileProcessor fp = new FileProcessor(inputf);
-		while ((input = fp.readLine()) != null) {
-			{
-				store.add(input);
-			}
-		}
-
-
-
-		Results res1 = new Results(outputf1);
-		res1.writeResults();
-		res1.closeMyFile();
-
+		
 	}  // end public static void main
     }  // end public class Driver

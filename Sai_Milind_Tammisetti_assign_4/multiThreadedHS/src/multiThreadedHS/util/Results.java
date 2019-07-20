@@ -1,4 +1,4 @@
-package studentCoursesBackup.util;
+package multiThreadedHS.util;
 
 import java.io.BufferedWriter;
 import java.util.ArrayList;

@@ -1,5 +1,4 @@
-
-package studentCoursesBackup.util;
+package multiThreadedHS.util;
 
 public class MyLogger{
 
