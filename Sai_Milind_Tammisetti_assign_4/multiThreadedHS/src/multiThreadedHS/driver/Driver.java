@@ -64,6 +64,7 @@ import java.util.ArrayList;
 
 			ThreadWorker threadWorker = new  ThreadWorker(inputf1, res);
 			threadWorker.start();
+			MergeSort ms = new MergeSort(res);
 			res.writeResults();
 			res.closeMyFile();
 
@@ -104,6 +105,7 @@ import java.util.ArrayList;
 			catch (Exception e){
 				System.out.println("Multithreading not working");
 			}
+			MergeSort ms = new MergeSort(res);
 			res.writeResults();
 			res.closeMyFile();
 
@@ -147,6 +149,7 @@ import java.util.ArrayList;
 			catch (Exception e){
 				System.out.println("Multithreading not working");
 			}
+			MergeSort ms = new MergeSort(res);
 			res.writeResults();
 			res.closeMyFile();
 		}
