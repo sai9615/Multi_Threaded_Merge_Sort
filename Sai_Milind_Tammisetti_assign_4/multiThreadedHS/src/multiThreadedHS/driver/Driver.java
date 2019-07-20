@@ -97,6 +97,13 @@ import java.util.ArrayList;
 			ThreadWorker threadWorker2 = new  ThreadWorker(inputf2, res);
 			threadWorker1.start();
 			threadWorker2.start();
+			try{
+				threadWorker1.join();
+				threadWorker2.join();
+			}
+			catch (Exception e){
+				System.out.println("Multithreading not working");
+			}
 			res.writeResults();
 			res.closeMyFile();
 
@@ -132,6 +139,14 @@ import java.util.ArrayList;
 			threadWorker1.start();
 			threadWorker2.start();
 			threadWorker3.start();
+			try{
+				threadWorker1.join();
+				threadWorker2.join();
+				threadWorker3.join();
+			}
+			catch (Exception e){
+				System.out.println("Multithreading not working");
+			}
 			res.writeResults();
 			res.closeMyFile();
 		}
