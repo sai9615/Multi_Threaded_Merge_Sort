@@ -9,12 +9,20 @@ public class ThreadWorker extends Thread{
 
     public String filename;
     public Results res;
+      /**
+      * Constructor of threadworker.
+      * @param fname - name of input file.
+      * @param results - result object.
+      */
     public  ThreadWorker(String fname, Results results){
     MyLogger.writeMessage("In constructor "+ getClass().getName(), MyLogger.DebugLevel.CONSTRUCTOR);
     filename = fname;
     res = results;
     }
 
+      /**
+      * execution of threads begin here once start is called.
+      */
     public void run() {
         String input;
         ArrayList<String> store = new ArrayList<>();
@@ -32,6 +40,10 @@ public class ThreadWorker extends Thread{
         }
     }
 
+      /**
+      * used to sort the values stored by thread in their respective arraylist.
+      * @param arr - arraylist to be sorted.
+      */
     public void bubbleSort(ArrayList<String> arr){
         ArrayList<Integer> temp = new ArrayList<>();
         for (int i = 0; i < arr.size(); i++) {
