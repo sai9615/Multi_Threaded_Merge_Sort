@@ -73,7 +73,8 @@ import java.io.File;
 
         public void storeNewResult(String value){
             // System.out.println("stored the result : "+value);
-            result.add(value);
+            String val = value + "\n";
+            result.add(val);
         }
 
 

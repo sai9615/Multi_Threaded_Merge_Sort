@@ -3,12 +3,14 @@ package multiThreadedHS.threads;
 import  multiThreadedHS.util.Results;
 import  multiThreadedHS.util.FileProcessor;
 import java.util.ArrayList;
+import  multiThreadedHS.util.MyLogger;
 
 public class ThreadWorker extends Thread{
 
     public String filename;
     public Results res;
     public  ThreadWorker(String fname, Results results){
+    MyLogger.writeMessage("In constructor "+ getClass().getName(), MyLogger.DebugLevel.CONSTRUCTOR);
     filename = fname;
     res = results;
     }

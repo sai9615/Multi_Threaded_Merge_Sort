@@ -13,7 +13,6 @@ public class MergeSort {
     public  MergeSort(Results results){
         arr1 = results.getResult();
         for(int i =0; i< arr1.size(); i++){
-            System.out.println(arr1.get(i));
             arr[i]=arr1.get(i);
         }
         this.sort(arr, 0, arr1.size()-1);

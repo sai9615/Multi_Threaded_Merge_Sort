@@ -105,6 +105,8 @@ import java.util.ArrayList;
 			catch (Exception e){
 				System.out.println("Multithreading not working");
 			}
+			MyLogger.writeMessage("Thread " + threadWorker1.getId() + " is alive: " +threadWorker1.isAlive(), MyLogger.DebugLevel.TID);
+			MyLogger.writeMessage("Thread " + threadWorker2.getId() + " is alive: " +threadWorker1.isAlive(), MyLogger.DebugLevel.TID);
 			MergeSort ms = new MergeSort(res);
 			res.writeResults();
 			res.closeMyFile();
@@ -149,6 +151,9 @@ import java.util.ArrayList;
 			catch (Exception e){
 				System.out.println("Multithreading not working");
 			}
+			MyLogger.writeMessage("Thread " + threadWorker1.getId() + " is alive: " +threadWorker1.isAlive(), MyLogger.DebugLevel.TID);
+			MyLogger.writeMessage("Thread " + threadWorker2.getId() + " is alive: " +threadWorker1.isAlive(), MyLogger.DebugLevel.TID);
+			MyLogger.writeMessage("Thread " + threadWorker3.getId() + " is alive: " +threadWorker1.isAlive(), MyLogger.DebugLevel.TID);
 			MergeSort ms = new MergeSort(res);
 			res.writeResults();
 			res.closeMyFile();
