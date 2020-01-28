@@ -1,9 +1,9 @@
-package multiThreadedHS.threads;
+package multiThreadedMS.threads;
 
-import  multiThreadedHS.util.Results;
-import  multiThreadedHS.util.FileProcessor;
+import  multiThreadedMS.util.Results;
+import  multiThreadedMS.util.FileProcessor;
 import java.util.ArrayList;
-import  multiThreadedHS.util.MyLogger;
+import  multiThreadedMS.util.MyLogger;
 
 public class ThreadWorker extends Thread{
 

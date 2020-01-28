@@ -1,4 +1,4 @@
-package multiThreadedHS.util;
+package multiThreadedMS.util;
 
 import java.io.BufferedWriter;
 import java.util.ArrayList;

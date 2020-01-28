@@ -1,4 +1,4 @@
-package multiThreadedHS.util;
+package multiThreadedMS.util;
 
 public class MyLogger{
 

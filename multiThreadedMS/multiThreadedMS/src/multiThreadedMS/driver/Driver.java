@@ -1,10 +1,10 @@
-package multiThreadedHS.driver;
+package multiThreadedMS.driver;
 
-import  multiThreadedHS.util.Results;
-import  multiThreadedHS.util.MyLogger;
-import  multiThreadedHS.util.FileProcessor;
-import  multiThreadedHS.util.MergeSort;
-import  multiThreadedHS.threads.ThreadWorker;
+import  multiThreadedMS.util.Results;
+import  multiThreadedMS.util.MyLogger;
+import  multiThreadedMS.util.FileProcessor;
+import  multiThreadedMS.util.MergeSort;
+import  multiThreadedMS.threads.ThreadWorker;
 
 
 import java.util.ArrayList;

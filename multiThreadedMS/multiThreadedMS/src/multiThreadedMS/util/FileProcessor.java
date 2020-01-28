@@ -1,4 +1,4 @@
-package multiThreadedHS.util;
+package multiThreadedMS.util;
 
 import java.io.BufferedReader;
 import java.io.File;
