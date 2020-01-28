@@ -45,21 +45,16 @@ due to which the thread was still alive and couldn't complete it's task.
 ## Description:
 The code perfroms the following tasks:
 
-*Reads the command line arguments.
-*Creates an instance of Results.
-*Creates N threaded Objects (instances of ThreadWorker class) where in we pass the reference to Results in the constructor of each ThreadedWorker.
-*Starts the N threaded Objects.
-*Calls an instance of the class in util/ package that does merge sort, and pass it an instance of Results so it can access the data that was written by all the threads.
-*After the Merge sort is completed, we call a method in Results, via the method in FileDisplayInterface, to write the data stored in Results to output.txt,which would be in non-descreasing order if merge sort succeeded.
+Reads the command line arguments.
+Creates an instance of Results.
+Creates N threaded Objects (instances of ThreadWorker class) where in we pass the reference to Results in the constructor of each ThreadedWorker.
+Starts the N threaded Objects.
+Calls an instance of the class in util/ package that does merge sort, and pass it an instance of Results so it can access the data that was written by all the threads.
+After the Merge sort is completed, we call a method in Results, via the method in FileDisplayInterface, to write the data stored in Results to output.txt,which would be in non-descreasing order if merge sort succeeded.
 
 I have used array list as my data structure to store the values that will be read by each thread from the 
-input text file and also to store the sorted values of each thread in result.java I had used arraylist.
- 
-The reason I had used arraylist instead of vectors is that because vectors is already synchronized so only one thread
-can access the code at a given time whereas arraylist is not synchronized so multiple threads can access the code at 
-a given time and this also makes the arraylist operations faster as compared to vectors.  
-
-In order to synchronize the threads I had called synchronize method on result object which will be passed to the threadworker 
+input text file and also to store the sorted values of each thread in result.java I had used arraylist. In order 
+to synchronize the threads I had called synchronize method on result object which will be passed to the threadworker 
 constructor by every thread that will be created. I have passed the same instance of result across all the threads and 
 had also made use of join method to ensure that a thread waits for the other thread until that thread completes it's 
 execution.    
